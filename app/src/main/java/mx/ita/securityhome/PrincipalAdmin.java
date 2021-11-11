@@ -32,18 +32,3 @@ public class PrincipalAdmin extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-        btnVisitar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1=new Intent(PrincipalAdmin.this, gestionVisitas.class);
-                startActivity(intent1);
-            }
-        });
-        btnIot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PrincipalAdmin.this, Dispositivos.class));
-            }
-        });
-    }
-}
