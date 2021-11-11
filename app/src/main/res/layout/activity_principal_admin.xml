@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E5E5C"
+    tools:context=".PrincipalAdmin">
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/modo_administrador"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutAdmin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/esquinas_redondeadas"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36">
+
+        <Button
+            android:id="@+id/btnGestionarResidentes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#489F81"
+            android:text="@string/gesti_n_de_residentes" />
+
+        <Button
+            android:id="@+id/btnGestionInv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gesti_n_de_invitados" />
+
+        <Button
+            android:id="@+id/btnGestionVis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bit_cora" />
+
+        <Button
+            android:id="@+id/btnIOT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IoT" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

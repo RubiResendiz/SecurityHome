@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SecurityHome</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="welcome">Welcome!</string>
+    <string name="invalid_username">This isn not a valid username</string>
+    <string name="invalid_password">Password must have 6 characters</string>
+    <string name="login_failed">"Failed Login"</string>
+    <string name="registrarme">Register</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Coto San Nicolás</string>
+    <string name="nav_header_subtitle">Salida a San Luis KM. 12</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_configuracion">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_invitadoslista">invitadoslista</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="estado_de_dispositivo">Device health</string>
+    <string name="dispositivo_conectado">Connected device</string>
+    <string name="direcci_n_ip">IP address</string>
+    <string name="transmisi_n_en_tiempo_real">Real time transmision</string>
+
+    <string name="security_home_v1_0_beta_desarrollado_por_el_equipo_2_security_home_2021_2022">Security Home v1.0 beta developed by Team 2 Security Home 2021-2022</string>
+
+    <string name="concluir_registro">Finish</string>
+
+    <string name="mi_nombre">My name</string>
+    <string name="mi_apellido">Mi lastname</string>
+
+    <string name="lugar_de_residencia">Place</string>
+    <string name="correo_electr_nico">Email</string>
+    <string name="tel_fono">Phone number</string>
+    <string name="contrase_a">Password</string>
+
+    <string name="solicitar_cambio">I need a change</string>
+    <string name="editar_residente">Edit resident</string>
+    <string name="nombre_s">Name(s)</string>
+    <string name="apellido_paterno">Last Name</string>
+    <string name="apellido_materno">If you have</string>
+    <string name="fecha_de_nacimiento">Day of birth</string>
+    <string name="calle_de_residencia">Street name</string>
+    <string name="n_mero_exterior">ext number</string>
+    <string name="correo_electr_nico_proporcionado">Email</string>
+    <string name="contrase_a_aleatoria">Random password</string>
+    <string name="actualizar_informaci_n">Update info</string>
+
+    <string name="g_nero">Genre</string>
+
+    <string name="nombre">Name</string>
+    <string name="apellido">Last Name</string>
+    <string name="mujer">Woman</string>
+
+    <string name="hombre">Man</string>
+    <string name="otro">Other</string>
+    <string name="prefiero_no_responder">I prefer no answer</string>
+    <string name="tipo_de_relaci_n">Relationshop</string>
+    <string name="editar_invitado">Edit invited</string>
+    <string name="invitados_y_reuniones">Guests and meetings</string>
+
+    <string name="residentes">Residents</string>
+    <string name="agregar_residente">Add residents</string>
+    <string name="fecha_de_ingreso_02_10_2020_hora_16_50">Pass date: 02/10/2020 Hour: 16:50</string>
+    <string name="fecha_de_salida_02_10_2020_hora_19_10">Exit date: 02/10/2020 Hour: 19:10</string>
+    <string name="anfitri_n_rebeca_s_nchez">Host: Rebeca Sánchez</string>
+
+    <string name="registro_de_prueba_usuario_normal">Registro de prueba usuario normal</string>
+    <string name="iniciar_sesi_n">Login</string>
+    <string name="modo_administrador">Admin mode</string>
+
+    <string name="alerta_de_seguridad">Security notification</string>
+    <string name="gesti_n_de_residentes">Residents management</string>
+    <string name="gesti_n_de_invitados">Guests management</string>
+    <string name="bit_cora">Binnacle</string>
+    <string name="cambiar_idioma">Language</string>
+    <string name="sonido_de_splash_screen">Splash Screen sound</string>
+    <string name="buenos_d_as">Good morning,</string>
+    <string name="notificaciones">Notificacions</string>
+    <string name="pr_ximo_6_de_noviembre">Próximo 6 de Noviembre</string>
+    <string name="acerca_de">About us</string>
+    <string name="cont_ctanos">Contact us</string>
+    <string name="organizar_una_reuni_n">Organize a meeting</string>
+    <string name="agregar_nuevo_invitado">Add an invited</string>
+    <string name="invitados">Guests</string>
+    <string name="espa_ol">Spanish</string>
+    <string name="ingl_s">English</string>
+</resources>

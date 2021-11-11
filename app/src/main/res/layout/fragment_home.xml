@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2EDF3"
+    tools:context=".ui.home.HomeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fondodia"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/side_nav_bar"
+            app:srcCompat="@drawable/paisaje_primavera_gradiente_23_2148445817"
+            tools:srcCompat="@drawable/paisaje_primavera_gradiente_23_2148445817" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtBuendia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif"
+                android:text="Bienvenido,"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/txtNombreHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Usuario"
+                android:textColor="#000000"
+                android:textSize="52sp" />
+
+            <ImageView
+                android:id="@+id/btnEditPerfil"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/perfil" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnnotificaciones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="9dp"
+        android:background="#2196F3"
+        android:backgroundTint="#9F2A2A"
+        android:foregroundTint="#000000"
+        android:shadowColor="#FFFFFF"
+        android:text="@string/notificaciones"
+        app:icon="@drawable/notify"
+        app:iconSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAgregarInvitado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#A01F1F" />
+
+    <Button
+        android:id="@+id/btnAgregarInvitado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="53dp"
+        android:background="#2196F3"
+        android:backgroundTint="#9F2A2A"
+        android:foregroundTint="#000000"
+        android:shadowColor="#FFFFFF"
+        android:text="@string/invitados"
+        app:iconSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnQR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#A01F1F" />
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeOffset="800"
+        android:gestureStrokeType="multiple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnQR"
+        android:layout_width="285dp"
+        android:layout_height="285dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/codigo_qr_1024x1024"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

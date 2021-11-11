@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/cambiares"
+        android:orderInCategory="100"
+        android:title="@string/espa_ol"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/cambiaren"
+        android:orderInCategory="100"
+        android:title="@string/ingl_s"
+        app:showAsAction="never" />
+</menu>

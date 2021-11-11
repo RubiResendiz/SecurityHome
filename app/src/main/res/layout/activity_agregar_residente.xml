@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".agregarResidente">
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="86dp"
+        android:text="@string/agregar_residente"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBackAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chevron_left_black_24dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+        <EditText
+            android:id="@+id/txtNombreAgregarRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/nombre_s"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txtCalleAgregarRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/calle_de_residencia"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txtNumeroAgregarRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/n_mero_exterior"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txtCorreoAgregarRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/correo_electr_nico_proporcionado"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/txtPassAgregarRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/contrase_a_aleatoria"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnFinalizarResidente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concluir_registro" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

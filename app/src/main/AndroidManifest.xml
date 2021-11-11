@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mx.ita.securityhome">
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/house_png"
+        android:label="Security Home"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SecurityHome.NoActionBar">
+        <activity android:name=".cardInvitados"></activity>
+        <activity android:name=".Calificanos" />
+        <activity android:name=".HowTo" />
+        <activity android:name=".Dispositivos" />
+        <activity android:name=".gestionVisitas" />
+        <activity android:name=".gestionInvitados" />
+        <activity android:name=".editarResidente" />
+        <activity android:name=".agregarResidente" />
+        <activity android:name=".gestionResidentes" />
+        <activity android:name=".PrincipalAdmin" />
+        <activity android:name=".configuracion" />
+        <activity android:name=".Notificaciones" />
+        <activity android:name=".agregarReunion" />
+        <activity android:name=".invitadoslista" />
+        <activity android:name=".Contacto" />
+        <activity android:name=".registroTemporal" />
+        <activity android:name=".generarfiesta" />
+        <activity android:name=".editarPerfil" />
+        <activity android:name=".agregarinvitado" />
+        <activity android:name=".editarinvitado" />
+        <activity android:name=".acercade" />
+        <activity
+            android:name=".Principal"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/Theme.SecurityHome.NoActionBar" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

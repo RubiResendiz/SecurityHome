@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1046228782530",
+    "firebase_url": "https://security-home-b0ecc-default-rtdb.firebaseio.com",
+    "project_id": "security-home-b0ecc",
+    "storage_bucket": "security-home-b0ecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046228782530:android:386c602ab28503caa51a5b",
+        "android_client_info": {
+          "package_name": "mx.ita.securityhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046228782530-951uil5uo3kcd186ldh4vqh64f7sbhq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXoXjdxP86oi2Xboh3v4XOLxP8p1lViao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046228782530-951uil5uo3kcd186ldh4vqh64f7sbhq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
