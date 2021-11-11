@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
+//Modificación XD SecurityHome21
 public class acercade extends AppCompatActivity {
     ImageButton btnAtras;
     @Override
