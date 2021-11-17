@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cardnotificacion">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtnotificacion"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:text="Notificaciones"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/imgnot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtalerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alerta_de_seguridad"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtrecuerda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recuerda actualizar las contraseñas regularmente"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtfecha"
+            android:layout_width="421dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

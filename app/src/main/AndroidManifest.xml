@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SecurityHome.NoActionBar">
-        <activity android:name=".cardInvitados"></activity>
+        <activity
+            android:name=".cardresidente"
+            android:exported="true" />
+        <activity
+            android:name=".cardnotificacion"
+            android:exported="true" />
+        <activity android:name=".cardInvitados" />
         <activity android:name=".Calificanos" />
         <activity android:name=".HowTo" />
         <activity android:name=".Dispositivos" />

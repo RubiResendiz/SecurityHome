@@ -6,6 +6,7 @@
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_acercade.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_agregar_residente.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_calificanos.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_cardnotificacion.xml" value="0.25" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_configuracion.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_contacto.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_dispositivos.xml" value="0.209375" />
@@ -15,6 +16,19 @@
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_generarfiesta.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_gestion_invitados.xml" value="0.209375" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_gestion_residentes.xml" value="0.209375" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_gestion_visitas.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_how_to.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_invitadoslista.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_login.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_main.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_notificaciones.xml" value="0.25" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_principal.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_principal_admin.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/card_invitados.xml" value="0.25" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/fragment_slideshow.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/nav_header_main.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/settings_activity.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/menu/activity_main_drawer.xml" value="0.209375" />
       </map>
     </option>
   </component>

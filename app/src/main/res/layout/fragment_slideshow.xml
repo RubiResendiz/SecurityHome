@@ -25,12 +25,6 @@
             android:src="@drawable/chevron_left_black_24dp" />
 
         <Button
-            android:id="@+id/btnAcercade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/acerca_de" />
-
-        <Button
             android:id="@+id/btnContacto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +35,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tutorial" />
+
+        <Button
+            android:id="@+id/btnAcercade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/acerca_de" />
 
         <Button
             android:id="@+id/btnCalifica"
