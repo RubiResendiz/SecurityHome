@@ -12,6 +12,10 @@ public class gestionResidentes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        
+        /**
+ * Gestion de residentes, codigo fuente 
+ */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_residentes);
         Button btnAgregar = findViewById(R.id.btnAgregarResidente);
