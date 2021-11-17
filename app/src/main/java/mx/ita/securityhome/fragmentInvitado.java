@@ -84,17 +84,7 @@ public class fragmentInvitado extends Fragment{
                                     String id_invitado = citi.child("id_invitado").getValue().toString();
                                     Log.i("Imprimirrrrr", id_invitado);
                                     if(id_invitado.equals(invitado)){
-                                        Log.i("jirijirijiri", "Sí entró");
-                                        String nombre = citi.child("nombre").getValue(String.class);
-                                        String telefono = citi.child("telefono").getValue(String.class);
-                                        Log.i("Valores invitado",id_invitado + " " + nombre);
-                                        elements.add(new ListElement(nombre, telefono, id_invitado));
-                                        Log.i("número de productos :D", invitados.size()+"");
-                                        ListAdapter listAdapter = new ListAdapter(elements, getContext());
-                                        RecyclerView recyclerView = root.findViewById(R.id.recicladoraXD);
-                                        recyclerView.setHasFixedSize(true);
-                                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                                        recyclerView.setAdapter(listAdapter);
+                                        
 
                                     }
                                 }
