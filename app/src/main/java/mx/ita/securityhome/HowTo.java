@@ -45,10 +45,8 @@ public class HowTo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_to);
-        btnReg = findViewById(R.id.btnRegresar);
-        btnSig = findViewById(R.id.btnRegresar2);
-        mlayout = findViewById(R.id.howToLayout);
-        btnReg.setOnClickListener(new View.OnClickListener() {
+        
+         {
             @Override
             public void onClick(View v) {
                 contador--;
