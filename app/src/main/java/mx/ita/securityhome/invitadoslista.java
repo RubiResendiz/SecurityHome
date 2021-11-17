@@ -66,14 +66,7 @@ public class invitadoslista extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 // get the current selected tab's position and replace the fragment accordingly
                 Fragment fragment = new fragmentInvitado();
-                switch (tab.getPosition()) {
-                    case 0:
-                        fragment = new fragmentInvitado();
-                        break;
-                    case 1:
-                        fragment = new fragmentReunion();
-                        break;
-                }
+                
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frame, fragment);
