@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class Notificaciones extends AppCompatActivity {
+    /**
+ * Codigo fuente de las notificaciones de la app 
+ */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
