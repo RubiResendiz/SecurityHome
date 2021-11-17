@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#57227E"
+    android:background="#00BCD4"
     tools:context=".Calificanos">
 
     <ImageButton
@@ -27,7 +27,7 @@
         android:layout_marginEnd="42dp"
         android:fontFamily="casual"
         android:text="Califica nuestra app"
-        android:textColor="#FFFFFF"
+        android:textColor="#131313"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
         android:ems="10"
         android:hint="Escribe una opinión"
         android:inputType="textPersonName"
-        android:textColorHint="#9B9EA8"
+        android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
