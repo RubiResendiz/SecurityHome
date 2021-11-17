@@ -10,6 +10,11 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class Dispositivos extends AppCompatActivity {
+    /**
+ *codigo java de los dispositivos a conectar 
+ * 
+ * 
+ */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
