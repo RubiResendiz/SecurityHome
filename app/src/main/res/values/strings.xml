@@ -71,8 +71,8 @@
     <string name="contrase_a_aleatoria">Contraseña aleatoria</string>
     <string name="actualizar_informaci_n">Actualizar información</string>
 
-    <string name="g_nero">Género</string>
 
+    <string name="g_nero">Género</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="mujer">Mujer</string>
