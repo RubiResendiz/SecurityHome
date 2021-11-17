@@ -27,12 +27,7 @@ public class invitadoslista extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout); // get the reference of TabLayout
         TabLayout.Tab firstTab = tabLayout.newTab(); // Create a new Tab names
         firstTab.setText("Invitados"); // set the Text for the first Tab
-        btnAgregar = findViewById(R.id.btnAddInvitado);
-        btnReunion = findViewById(R.id.btnAddReunion);
-        //btnEditar = findViewById(R.id.btnEditInvitado);
-        ImageButton btnReturn = findViewById(R.id.imageButton2);
-        TabLayout.Tab secondTab = tabLayout.newTab(); // Create a new Tab names
-        secondTab.setText("Reuniones"); // set the Text for the first Tab
+        
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
