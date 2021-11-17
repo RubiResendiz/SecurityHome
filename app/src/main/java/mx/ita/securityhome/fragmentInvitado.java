@@ -62,11 +62,7 @@ public class fragmentInvitado extends Fragment{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     for (DataSnapshot citi : dataSnapshot.getChildren()){
-                        String id_invitado = citi.child("id_invitado").getValue().toString();
-                        String id_anfitrion = citi.child("id_anfitrion").getValue().toString();
-                        Log.i("String PRUEBA", id_anfitrion+"");
-                        if(id_anfitrion.equals(userID))
-                            invitados.add(id_invitado);
+                        
                     }
                 }
                 Log.i("número de invitados", invitados.size()+"");
