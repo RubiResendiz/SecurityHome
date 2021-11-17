@@ -11,6 +11,9 @@ import android.widget.ImageButton;
 import mx.ita.securityhome.ui.login.LoginActivity;
 
 public class editarPerfil extends AppCompatActivity {
+    /**
+ * codigo fuente de editar perfil (usuario residente) 
+ */
     ImageButton regresar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
