@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_acercade.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_agregar_residente.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_calificanos.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_configuracion.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_contacto.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_dispositivos.xml" value="0.209375" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_editar_perfil.xml" value="0.209375" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_editar_residente.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_editarinvitado.xml" value="0.209375" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_generarfiesta.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_gestion_invitados.xml" value="0.209375" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_gestion_residentes.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
