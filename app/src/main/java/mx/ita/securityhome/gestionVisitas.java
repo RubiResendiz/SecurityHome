@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class gestionVisitas extends AppCompatActivity {
+    /**
+ * codigo fuente de gestion de visitas(administrador)
+ */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

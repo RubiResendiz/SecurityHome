@@ -27,6 +27,9 @@ import java.util.Map;
 import mx.ita.securityhome.ui.login.LoginActivity;
 
 public class agregarResidente extends AppCompatActivity {
+    /**
+ * Codigo fuente de agregar residente 
+ */
     private FirebaseAuth mAuth;
     DatabaseReference mDatabase;
     @Override

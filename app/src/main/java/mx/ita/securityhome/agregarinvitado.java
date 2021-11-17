@@ -40,6 +40,10 @@ public class agregarinvitado extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        
+        /**
+ * Codigo fuente de agregarinvitado.java 
+ */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregarinvitado);
         Button captcha = findViewById(R.id.btnCaptcha);
