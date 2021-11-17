@@ -103,7 +103,19 @@ public class editarinvitado extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    
+                    String nombre = dataSnapshot.child("nombre").getValue(String.class);
+                    String telefono = dataSnapshot.child("telefono").getValue(String.class);
+                    String genero = dataSnapshot.child("genero").getValue(String.class);
+                    String relacion = dataSnapshot.child("relacion").getValue(String.class);
+                    id = dataSnapshot.child("id_anfitrion").getValue().toString();
+                    id_invitado = dataSnapshot.child("id_invitado").getValue().toString();
+
+                    txtNombre.setText(nombre);
+                    txtTelefono.setText(telefono);
+                    Log.i("RELAAA", getPosition(rel,relacion)+"");
+                    Log.i("GEBBB", getPosition(gen,genero)+"");
+                    relacions.setSelection((int)getPosition(rel,relacion));
+                    generos.setSelection((int)getPosition(gen,genero));
                 }
             }
 
