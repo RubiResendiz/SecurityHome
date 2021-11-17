@@ -8,6 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+/**
+ * archivo java de contactanos (parte funcional)
+ *  
+ *
+ */
+
 public class Calificanos extends AppCompatActivity {
 
     @Override
