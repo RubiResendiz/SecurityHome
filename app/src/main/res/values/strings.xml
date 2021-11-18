@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SecurityHome</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">Acceso</string>
     <string name="prompt_email">Correo electrónico</string>
     <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Iniciar Sesión</string>
@@ -15,33 +15,32 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Coto San Nicolás</string>
     <string name="nav_header_subtitle">Salida a San Luis KM. 12</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="nav_header_desc">"Encabezado de navegación "</string>
+    <string name="action_settings">Ajustes</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Hogar</string>
+    <string name="menu_gallery">Galeria</string>
+    <string name="menu_slideshow">Diapositivas</string>
     <string name="title_activity_configuracion">configuracion</string>
 
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="messages_header">Mensajes</string>
+    <string name="sync_header">Sincronizar</string>
 
     <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <string name="signature_title">Tu firma</string>
+    <string name="reply_title">"Acción de respuesta predeterminada "</string>
 
     <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="sync_title">"Sincronizar el correo electrónico periódicamente "</string>
+    <string name="attachment_title">"Descargar archivos adjuntos entrantes "</string>
+    <string name="attachment_summary_on">Descargar automáticamente archivos adjuntos para correos electrónicos entrantes</string>
+    <string name="attachment_summary_off">"Descargue archivos adjuntos solo cuando se soliciten manualmente "</string>
     <string name="title_activity_invitadoslista">invitadoslista</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">"Hola fragmento en blanco "</string>
     <string name="estado_de_dispositivo">Estado de dispositivo</string>
     <string name="dispositivo_conectado">Dispositivo conectado</string>
     <string name="direcci_n_ip">Dirección IP</string>

@@ -33,6 +33,7 @@ import java.util.List;
 
 
 public class fragmentInvitado extends Fragment{
+
     List<String> invitados;
     List<ListElement> elements;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
