@@ -6,10 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,7 +48,7 @@ public class ListAdapter extends RecyclerView.Adapter<mx.ita.securityhome.ListAd
             super(ItemView);
             nombre = ItemView.findViewById(R.id.labelNombreInvitado);
             telefono = ItemView.findViewById(R.id.labelTelefonoInvitado);
-            edit = ItemView.findViewById(R.id.btnEditCard);
+            edit = ItemView.findViewById(R.id.btnEditCardRes);
             edit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

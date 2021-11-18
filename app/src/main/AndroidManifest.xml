@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SecurityHome.NoActionBar">
         <activity
+            android:name=".Reportebug"
+            android:exported="true" />
+        <activity
             android:name=".cardresidente"
             android:exported="true" />
         <activity

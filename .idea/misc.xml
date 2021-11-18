@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_acercade.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_agregar_residente.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_agregarinvitado.xml" value="0.1693840579710145" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_calificanos.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_cardnotificacion.xml" value="0.25" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_cardresidente.xml" value="0.22" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_configuracion.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_contacto.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_dispositivos.xml" value="0.209375" />
@@ -24,6 +26,7 @@
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_notificaciones.xml" value="0.25" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_principal.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_principal_admin.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/activity_reportebug.xml" value="0.161231884057971" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/card_invitados.xml" value="0.25" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/fragment_slideshow.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/rubir/SecurityHome-master/app/src/main/res/layout/nav_header_main.xml" value="0.18297101449275363" />
