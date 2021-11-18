@@ -109,4 +109,11 @@
     <string name="invitados">Invitados</string>
     <string name="espa_ol">Español</string>
     <string name="ingl_s">Inglés</string>
+    <string name="reportar_un_bug">Reportar Un Bug</string>
+    <string name="todo" />
+    <string name="enviar">enviar</string>
+    <string name="para">para</string>
+    <string name="mensaje">mensaje</string>
+    <string name="asunto">asunto</string>
+    <string name="se_enviar_un_mensaje_por_correo_a_findmybusiness_gmail_com_en_el_que_detallar_s_el_problema_que_encontraste_nuestros_colaboradores_te_ayudar_n_en_breve_mejorando_la_aplicaci_n">mensajecorreo</string>
 </resources>
