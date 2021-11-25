@@ -38,7 +38,7 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="title_activity_invitadoslista">invitadoslista</string>
+    <string name="title_activity_invitadoslista">guest list</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -72,7 +72,7 @@
     <string name="contrase_a_aleatoria">Random password</string>
     <string name="actualizar_informaci_n">Update info</string>
 
-    <string name="g_nero">Genre</string>
+    <string name="g_nero">Gender</string>
 
     <string name="nombre">Name</string>
     <string name="apellido">Last Name</string>
@@ -91,7 +91,7 @@
     <string name="fecha_de_salida_02_10_2020_hora_19_10">Exit date: 02/10/2020 Hour: 19:10</string>
     <string name="anfitri_n_rebeca_s_nchez">Host: Rebeca Sánchez</string>
 
-    <string name="registro_de_prueba_usuario_normal">Registro de prueba usuario normal</string>
+    <string name="registro_de_prueba_usuario_normal">Normal user test log</string>
     <string name="iniciar_sesi_n">Login</string>
     <string name="modo_administrador">Admin mode</string>
 
@@ -103,7 +103,7 @@
     <string name="sonido_de_splash_screen">Splash Screen sound</string>
     <string name="buenos_d_as">Good morning,</string>
     <string name="notificaciones">Notificacions</string>
-    <string name="pr_ximo_6_de_noviembre">Próximo 6 de Noviembre</string>
+    <string name="pr_ximo_6_de_noviembre">Next November 6</string>
     <string name="acerca_de">About us</string>
     <string name="cont_ctanos">Contact us</string>
     <string name="organizar_una_reuni_n">Organize a meeting</string>
@@ -111,4 +111,10 @@
     <string name="invitados">Guests</string>
     <string name="espa_ol">Spanish</string>
     <string name="ingl_s">English</string>
+    <string name="enviar">send</string>
+    <string name="reportar_un_bug">Report a bug</string>
+    <string name="para">for</string>
+    <string name="mensaje">message</string>
+    <string name="asunto">affair</string>
+    <string name="se_enviar_un_mensaje_por_correo_a_findmybusiness_gmail_com_en_el_que_detallar_s_el_problema_que_encontraste_nuestros_colaboradores_te_ayudar_n_en_breve_mejorando_la_aplicaci_n">e-mail message</string>
 </resources>
