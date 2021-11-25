@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="pickDate1E" type="id">va1</item>
+    <item name="pickDate2E" type="id">va2</item>
+    <item name="pickHour1E" type="id">va3</item>
+    <item name="pickHour2E" type="id">va4</item>
+    <item name="btnGuardarEditReunion" type="id">btn111</item>
+    <item name="btnReturnListaEditReu" type="id">btn222</item>
+</resources>

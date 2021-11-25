@@ -28,6 +28,7 @@
         <activity android:name=".gestionInvitados" />
         <activity android:name=".prueba" />
         <activity android:name=".editarResidente" />
+        <activity android:name=".editarReunion" />
         <activity android:name=".agregarResidente" />
         <activity android:name=".gestionResidentes" />
         <activity android:name=".PrincipalAdmin" />
