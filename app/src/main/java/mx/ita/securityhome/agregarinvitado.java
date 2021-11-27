@@ -44,3 +44,94 @@ public class agregarinvitado extends AppCompatActivity {
         /**
  * Codigo fuente de agregarinvitado.java 
  */
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_agregarinvitado);
+        Button captcha = findViewById(R.id.btnCaptcha);
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        add = findViewById(R.id.btnAddConfirm);
+        add.setEnabled(false);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView nombre = findViewById(R.id.txtNombreInvitado),
+                        telefono = findViewById(R.id.txtTelefonoInvitado);
+                Spinner spinnerGen = findViewById(R.id.spinnerGen),
+                        spinnerRel = findViewById(R.id.spinnerRel);
+
+                Map<String, Object> map = new HashMap<>();
+                String IDnuevo = mAuth.getCurrentUser().getUid();
+                //mapear información para insertar en firebase
+                //sql = insert into nombre, genero, re
+                map.put("id_invitado",IDnuevo + telefono.getText().toString());
+                map.put("nombre", nombre.getText().toString());
+                map.put("telefono", telefono.getText().toString());
+                map.put("genero", spinnerGen.getSelectedItem().toString());
+                map.put("relacion",spinnerRel.getSelectedItem().toString());
+                map.put("id_anfitrion", IDnuevo);
+
+                mDatabase.child("invitados").child(IDnuevo + telefono.getText().toString()).
+                        setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task2) {
+                        if(task2.isSuccessful()){
+                            Log.i("Todo bien", "Todo bien master");
+                        }else{
+                            Log.w("Error XD 1",task2.getException());
+                        }
+                    }
+                });
+                startActivity(new Intent(agregarinvitado.this, invitadoslista.class));
+            }
+        });
+        captcha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SafetyNet.getClient(agregarinvitado.this).verifyWithRecaptcha(SiteKey)
+                        .addOnSuccessListener(new OnSuccessListener<SafetyNetApi.RecaptchaTokenResponse>() {
+                            @Override
+                            public void onSuccess(SafetyNetApi.RecaptchaTokenResponse recaptchaTokenResponse) {
+                                // Indicates communication with reCAPTCHA service was
+                                // successful.
+
+                                //verificamos que el usuario ingrese la información solicitada forma correcta
+                                String userResponseToken = recaptchaTokenResponse.getTokenResult();
+                                if (!userResponseToken.isEmpty()) {
+                                    // Validate the user response token using the
+                                    // reCAPTCHA siteverify API.
+                                    Log.e("captchabelazlo", userResponseToken);
+                                    captcha.setBackgroundColor(Color.GREEN);
+                                    add.setEnabled(true);
+                                }
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                if (e instanceof ApiException) {
+                                    // An error occurred when communicating with the
+                                    // reCAPTCHA service. Refer to the status code to
+                                    // handle the error appropriately.
+                                    ApiException apiException = (ApiException) e;
+                                    int statusCode = apiException.getStatusCode();
+                                    Log.e("Captchabela", "Error: " + CommonStatusCodes
+                                            .getStatusCodeString(statusCode));
+                                } else {
+                                    // A different, unknown type of error occurred.
+                                    Log.e("Captchabela", "Error: " + e.getMessage());
+                                }
+                            }
+                        });
+            }
+        });
+
+        regresar = findViewById(R.id.btnReturnInvitadoA);
+        regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(agregarinvitado.this, invitadoslista.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
