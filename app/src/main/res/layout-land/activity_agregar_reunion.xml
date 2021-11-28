@@ -6,17 +6,17 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btnGenerarCompartir2"
+        android:id="@+id/btnGuardarEditReunion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="288dp"
         android:layout_marginBottom="16dp"
-        android:text="Generar y compartir código QR"
+        android:text="Crear reunión"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
-        android:id="@+id/btnReturnLista"
+        android:id="@+id/btnReturnListaEditReu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/chevron_left_black_24dp" />
 
     <TextView
-        android:id="@+id/textView53"
+        android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
@@ -37,81 +37,101 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView54"
+        android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:text="Al día:"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textView53"
-        app:layout_constraintTop_toBottomOf="@+id/textView53" />
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <TextView
-        android:id="@+id/textView55"
+        android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Horario de:"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textView54"
-        app:layout_constraintTop_toBottomOf="@+id/textView54" />
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <TextView
-        android:id="@+id/textView56"
+        android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:text="A: "
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textView55"
-        app:layout_constraintTop_toBottomOf="@+id/textView55" />
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" /><![CDATA[
 
-    <TextView
-        android:id="@+id/pickDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
-        android:hint="Selecciona una fecha"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/pickDate3"
-        app:layout_constraintStart_toStartOf="@+id/pickDate3" />
 
-    <EditText
-        android:id="@+id/editTextTime3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        android:ems="10"
-        android:inputType="time"
+
+    "
         app:layout_constraintBottom_toTopOf="@+id/editTextTime4"
         app:layout_constraintStart_toStartOf="@+id/editTextTime4" />
 
+
+
+
+
+
+
+
+
+    ]]>
+
     <TextView
-        android:id="@+id/pickDate3"
+        android:id="@+id/pickDate1E"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="280dp"
         android:hint="Selecciona una fecha"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTime3"
-        app:layout_constraintStart_toStartOf="@+id/editTextTime3" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView52" />
 
-    <EditText
-        android:id="@+id/editTextTime4"
+    <TextView
+        android:id="@+id/pickHour1E"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="260dp"
         android:ems="10"
-        android:inputType="time"
-        app:layout_constraintStart_toEndOf="@+id/textView55"
-        app:layout_constraintTop_toBottomOf="@+id/textView55" />
+        android:hint="Selecciona una hora"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickDate2E" />
+
+    <TextView
+        android:id="@+id/pickDate2E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="280dp"
+        android:hint="Selecciona una fecha"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickDate1E" />
+
+    <TextView
+        android:id="@+id/pickHour2E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="260dp"
+        android:ems="10"
+        android:hint="Selecciona una hora"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <TextView
         android:id="@+id/textView52"
