@@ -6,4 +6,5 @@
     <item name="pickHour2E" type="id">va4</item>
     <item name="btnGuardarEditReunion" type="id">btn111</item>
     <item name="btnReturnListaEditReu" type="id">btn222</item>
+    <item name="recicladoraReunion" type="id">val9</item>
 </resources>
