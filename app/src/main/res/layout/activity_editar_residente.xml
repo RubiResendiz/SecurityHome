@@ -29,7 +29,8 @@
         android:background="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/chevron_left_black_24dp" />
+        app:srcCompat="@drawable/chevron_left_black_24dp"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:layout_width="408dp"
@@ -40,71 +41,36 @@
         app:layout_constraintTop_toBottomOf="@+id/textView42">
 
         <EditText
-            android:id="@+id/txtNombreAgregarRes"
+            android:id="@+id/txtEditNombreRes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/nombre_s"
-            android:inputType="textPersonName" />
+            android:hintTextColor="#757575"
+            android:inputType="textPersonName"
+            android:autofillHints="" />
 
         <EditText
-            android:id="@+id/txtApellidoPatAgregarRes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/apellido_paterno"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/txtApellidoMatAgregarRes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/apellido_materno"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/txtCURPAgregarRes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="CURP"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/txtFechaNacAgregarRes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/fecha_de_nacimiento"
-            android:inputType="date" />
-
-        <EditText
-            android:id="@+id/txtCalleAgregarRes"
+            android:id="@+id/txtEditCalleRes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/calle_de_residencia"
+            android:hintTextColor="#757575"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/txtNumeroAgregarRes"
+            android:id="@+id/txtEditNumRes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/n_mero_exterior"
-            android:inputType="textPersonName" />
+            android:hintTextColor="#757575"
+            android:inputType="textPersonName"
+            android:autofillHints="" />
 
         <EditText
-            android:id="@+id/txtCorreoAgregarRes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/correo_electr_nico_proporcionado"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/txtPassAgregarRes"
+            android:id="@+id/txtEditPassRes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -112,10 +78,11 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/btnFinalizarResidente"
+            android:id="@+id/btnFinalizarEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/actualizar_informaci_n" />
+            android:text="@string/actualizar_informaci_n"
+            android:textColor="#212121" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

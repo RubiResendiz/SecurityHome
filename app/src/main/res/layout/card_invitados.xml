@@ -40,7 +40,7 @@
             android:paddingStart="220dp">
 
             <ImageButton
-                android:id="@+id/btnEditCardRes"
+                android:id="@+id/btnEditCard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -48,7 +48,7 @@
                 app:srcCompat="@android:drawable/ic_menu_edit" />
 
             <ImageButton
-                android:id="@+id/btnDeleteCardRes"
+                android:id="@+id/btnDeleteCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
