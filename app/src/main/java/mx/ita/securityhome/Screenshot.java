@@ -21,6 +21,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Screenshot extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,19 +40,19 @@ public class Screenshot extends AppCompatActivity {
 
         if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {
             //try {
-            ConstraintLayout content = findViewById(R.id.screenShotLayout);
-            content.setDrawingCacheEnabled(true);
-            Bitmap bitmap2 = content.getDrawingCache();
-            content.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
-                    View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-            content.layout(0, 0, content.getMeasuredWidth(), content.getMeasuredHeight());
+                ConstraintLayout content = findViewById(R.id.screenShotLayout);
+                content.setDrawingCacheEnabled(true);
+                Bitmap bitmap2 = content.getDrawingCache();
+                content.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                        View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+                content.layout(0, 0, content.getMeasuredWidth(), content.getMeasuredHeight());
 
             content.buildDrawingCache(true);
             Bitmap b = Bitmap.createBitmap(content.getDrawingCache());
             content.setDrawingCacheEnabled(false); // clear drawing cache
-            if(b == null)
-                Log.i("Bitmap","no hay nada XD");
-            shareImageUri(saveImage(b));
+                if(b == null)
+                    Log.i("Bitmap","no hay nada XD");
+                shareImageUri(saveImage(b));
                 /*File file, f;
                 file = new File(android.os.Environment.getExternalStorageDirectory(), "SecurityHomeCache");
                 if (!file.exists()) {
@@ -102,5 +103,4 @@ public class Screenshot extends AppCompatActivity {
         intent.setType("image/png");
         startActivity(intent);
     }
-
 }

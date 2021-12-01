@@ -37,8 +37,7 @@ public class SlideshowFragment extends Fragment implements View.OnClickListener 
         btnContacto.setOnClickListener(this);
         btnHowToBasic = root.findViewById(R.id.btnHowTo);
         btnHowToBasic.setOnClickListener(this);
-        btnCal = root.findViewById(R.id.btnCalifica);
-        btnCal.setOnClickListener(this);
+
         return root;
     }
 
@@ -56,9 +55,7 @@ public class SlideshowFragment extends Fragment implements View.OnClickListener 
             case R.id.btnHowTo:
                 startActivity(new Intent(getActivity(), HowTo.class));
                 break;
-            case R.id.btnCalifica:
-                startActivity(new Intent(getActivity(), Calificanos.class));
-                break;
+
         }
     }
 

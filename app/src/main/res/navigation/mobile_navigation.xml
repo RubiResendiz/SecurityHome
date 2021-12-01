@@ -14,12 +14,30 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="mx.ita.securityhome.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/ajustes"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="mx.ita.securityhome.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/ayuda"
         tools:layout="@layout/fragment_slideshow" />
+
+    <activity
+        android:id="@+id/puntuarApp"
+        android:name="mx.ita.securityhome.Calificanos"
+        android:label="@string/calif_canos"
+        tools:layout="@layout/activity_calificanos" />
+    <activity
+        android:id="@+id/enviarBugs"
+        android:name="mx.ita.securityhome.Reportebug"
+        android:label="@string/reportar_un_bug"
+        tools:layout="@layout/activity_reportebug"/>
+
+    <activity
+        android:id="@+id/cerrarsesion"
+        android:name="mx.ita.securityhome.cerrarSesion"
+        android:label="@string/cerrar_sesion"
+        tools:layout="@layout/activity_cerrar_sesion" />
+
 </navigation>

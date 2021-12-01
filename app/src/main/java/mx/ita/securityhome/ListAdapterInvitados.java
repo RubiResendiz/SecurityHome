@@ -34,12 +34,12 @@ public class ListAdapterInvitados extends RecyclerView.Adapter<ListAdapterInvita
     @Override
     public int getItemCount(){return mData.size();}
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public ListAdapterInvitados.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = mInflater.inflate(R.layout.card_invitados, null);
-        return new ViewHolder(view);
+        return new ListAdapterInvitados.ViewHolder(view);
     }
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position){
+    public void onBindViewHolder(final ListAdapterInvitados.ViewHolder holder, final int position){
         holder.bindData(mData.get(position));
     }
     public void setItems(List<ListElementInvitados> items){mData= items;}

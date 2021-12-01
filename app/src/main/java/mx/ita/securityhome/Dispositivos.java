@@ -49,6 +49,7 @@ public class Dispositivos extends AppCompatActivity {
     static private TextView estado; //si está online u opffline
     static private EditText capturar_ip;
     static private Button conectar;
+
     Socket socket;
 
     @Override
@@ -61,6 +62,7 @@ public class Dispositivos extends AppCompatActivity {
         estado = findViewById(R.id.txtEstado);
         capturar_ip = findViewById(R.id.txtIPHost);
         conectar = findViewById(R.id.btnConectar);
+
         conectar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,12 +98,14 @@ public class Dispositivos extends AppCompatActivity {
         @RequiresApi(api = Build.VERSION_CODES.O)
         @Override
         protected String doInBackground(String... params) {
-            IP_HOST = capturar_ip.getText().toString();
+        IP_HOST = capturar_ip.getText().toString();
+
             Log.i("ola","corriendo");
             try {
                 boolean XD = true;
                 socket = new Socket(IP_HOST,PORT); //creamos socket con los datos del server
                 int conteo=0;
+
                 BufferedReader mBufferIn = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
                 //buffer para contener los packetes con 3 secciones
 
@@ -109,6 +113,7 @@ public class Dispositivos extends AppCompatActivity {
                     String xxx = mBufferIn.readLine(); //encabezado del formato utf-8
                     Log.i("CONTEO: " , (conteo++)+"-----------------");
                     int size = Integer.parseInt(xxx);
+
                     String next = mBufferIn.readLine(); //segunda línea es la imagen en base64 (string)
                     InputStream targetStream = new ByteArrayInputStream(next.getBytes()); //guardar base 64 en InputStream
                     Log.i("Printing image",next.length()+" ::: " + size + " ::: " + targetStream.available());

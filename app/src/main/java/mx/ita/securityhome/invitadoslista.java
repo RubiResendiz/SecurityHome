@@ -4,21 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Locale;
 
 
 public class invitadoslista extends AppCompatActivity {
     Button btnAgregar;
     Button btnReunion;
+    TextView idioma;
     ImageButton btnEditar;
+    boolean espa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +34,55 @@ public class invitadoslista extends AppCompatActivity {
         fragmentInvitado taf = new fragmentInvitado();
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout); // get the reference of TabLayout
         TabLayout.Tab firstTab = tabLayout.newTab(); // Create a new Tab names
-        firstTab.setText("Invitados"); // set the Text for the first Tab
+        idioma = findViewById(R.id.btnCambiarIdioma);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(invitadoslista.this);
+        idioma.setText(R.string.bandera);
+        espa = true;
+        if(preferences.getString("idioma",null).equals("es")){ espa = true; }else{espa = false;}
+
+        idioma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(espa){
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("idioma", "en");
+                    editor.commit();
+                    Locale localizacion = new Locale("en", "US");
+                    Locale.setDefault(localizacion);
+                    Configuration config = new Configuration();
+                    config.locale = localizacion;
+                    getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                    Log.i("Cocacola","espuma1");
+                    espa = false;
+
+                }else{
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("idioma", "es");
+                    editor.commit();
+                    Locale localizacion = new Locale("es", "ES");
+                    Locale.setDefault(localizacion);
+                    Configuration config = new Configuration();
+                    config.locale = localizacion;
+                    getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                    Log.i("Cocacola","espuma1");
+                    espa = true;
+
+                }
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+            }
+        });
+
+
+
+        firstTab.setText(R.string.invitados); // set the Text for the first Tab
         btnAgregar = findViewById(R.id.btnAddInvitado);
         btnReunion = findViewById(R.id.btnAddReunion);
         //btnEditar = findViewById(R.id.btnEditInvitado);
         ImageButton btnReturn = findViewById(R.id.imageButton2);
         TabLayout.Tab secondTab = tabLayout.newTab(); // Create a new Tab names
-        secondTab.setText("Reuniones"); // set the Text for the first Tab
+        secondTab.setText(R.string.reunion); // set the Text for the first Tab
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

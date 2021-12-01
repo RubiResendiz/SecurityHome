@@ -40,10 +40,6 @@ public class agregarinvitado extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
-        /**
- * Codigo fuente de agregarinvitado.java 
- */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregarinvitado);
         Button captcha = findViewById(R.id.btnCaptcha);
@@ -63,14 +59,15 @@ public class agregarinvitado extends AppCompatActivity {
                 String IDnuevo = mAuth.getCurrentUser().getUid();
                 //mapear información para insertar en firebase
                 //sql = insert into nombre, genero, re
-                map.put("id_invitado",IDnuevo + telefono.getText().toString());
+                String complete = IDnuevo + agregarResidente.generateRandomPassword(10);
+                map.put("id_invitado",complete);
                 map.put("nombre", nombre.getText().toString());
                 map.put("telefono", telefono.getText().toString());
                 map.put("genero", spinnerGen.getSelectedItem().toString());
                 map.put("relacion",spinnerRel.getSelectedItem().toString());
                 map.put("id_anfitrion", IDnuevo);
 
-                mDatabase.child("invitados").child(IDnuevo + telefono.getText().toString()).
+                mDatabase.child("invitados").child(complete).
                         setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task2) {

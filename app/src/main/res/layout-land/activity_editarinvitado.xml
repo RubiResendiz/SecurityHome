@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#009688">
 
     <ImageButton
         android:id="@+id/btnReturnInvitadoA"
@@ -18,28 +18,43 @@
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="247dp"
-        android:layout_height="113dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEditGen"
         app:srcCompat="@drawable/friends" />
 
     <TextView
         android:id="@+id/textView33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="252dp"
+        android:layout_marginStart="280dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="287dp"
         android:text="@string/editar_invitado"
         android:textColor="#000000"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Spinner
+        android:id="@+id/spinnerEditGen"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="111dp"
+        android:layout_weight="1"
+        android:entries="@array/spinnerGen"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEditConfirm"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerEditRel"
+        app:layout_constraintStart_toEndOf="@+id/textView50"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarNombreInvitado" />
+
     <EditText
-        android:id="@+id/txtNombreInvitado2"
-        android:layout_width="match_parent"
+        android:id="@+id/txtEditarNombreInvitado"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
@@ -50,102 +65,57 @@
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
     <EditText
-        android:id="@+id/txtApellidoInvitado2"
-        android:layout_width="match_parent"
+        android:id="@+id/txtEditarTelefonoInvitado"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/apellido"
+        android:text="@string/tel_fono"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreInvitado2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarNombreInvitado" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/esmujer2"
+    <Spinner
+        android:id="@+id/spinnerEditRel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/mujer"
-        app:layout_constraintEnd_toStartOf="@+id/eshombre2"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:entries="@array/spinnerRel"
         app:layout_constraintStart_toEndOf="@+id/textView50"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellidoInvitado2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarTelefonoInvitado" />
 
     <TextView
         android:id="@+id/textView50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/tipo_de_relaci_n"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellidoInvitado2" />
-
-    <com.google.android.material.chip.Chip
-        android:id="@+id/eshombre2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/hombre"
-        app:layout_constraintStart_toEndOf="@+id/esmujer2"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellidoInvitado2" />
-
-    <com.google.android.material.chip.Chip
-        android:id="@+id/esotro2"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/otro"
-        app:layout_constraintStart_toEndOf="@+id/eshombre2"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellidoInvitado2" />
-
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_weight="1"
-        android:text="@string/prefiero_no_responder"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textView49"
-        app:layout_constraintTop_toBottomOf="@+id/eshombre2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/spinnerEditRel"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/tipo_de_relaci_n"
+        android:layout_marginTop="25dp"
+        android:text="@string/g_nero"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/esmujer2" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="315dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellidoInvitado2"
-        tools:srcCompat="@drawable/captcha" />
+        app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
     <Button
-        android:id="@+id/btnEditConfirm2"
-        android:layout_width="339dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="70dp"
+        android:id="@+id/btnEditConfirm"
+        android:layout_width="301dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:background="#AC5050"
         android:text="@string/editar_invitado"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

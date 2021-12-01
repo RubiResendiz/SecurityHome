@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondoajustes"
     tools:context=".ui.gallery.GalleryFragment">
 
     <LinearLayout
@@ -29,13 +30,8 @@
             android:checked="true"
             android:paddingStart="16dp"
             android:paddingTop="8dp"
-            android:text="Splash Screen animado"
+            android:text="@string/splash_screen_animado"
             android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/btnBug"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Reportar un bug" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

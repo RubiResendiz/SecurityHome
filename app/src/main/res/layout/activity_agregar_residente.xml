@@ -47,8 +47,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/nombre_s"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txtCalleAgregarRes"
@@ -56,8 +55,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/calle_de_residencia"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txtNumeroAgregarRes"
@@ -65,8 +63,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/n_mero_exterior"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txtCorreoAgregarRes"
@@ -82,8 +79,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/contrase_a_aleatoria"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/btnFinalizarResidente"

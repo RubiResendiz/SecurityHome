@@ -62,6 +62,7 @@ public class LoginActivity extends AppCompatActivity {
     private LoginViewModel loginViewModel;
     private VideoView mVideoView;
     private FirebaseAuth mAuth;
+
     private Executor executor;
     private androidx.biometric.BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
@@ -105,11 +106,13 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 //        FirebaseUser currentUser = mAuth.getCurrentUser();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        //instanciamos mensaje de identifica´ción biométrica
         promptInfo = new androidx.biometric.BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Ventana de acceso biométrico")
                 .setSubtitle("Inicia sesión usando tu credencial biométrica")
                 .setNegativeButtonText("Usar correo y contraseña")
                 .build();
+
         executor = ContextCompat.getMainExecutor(this);
         biometricPrompt = new androidx.biometric.BiometricPrompt(LoginActivity.this,
                 executor, new androidx.biometric.BiometricPrompt.AuthenticationCallback() {
@@ -146,6 +149,7 @@ public class LoginActivity extends AppCompatActivity {
                         String contra = dataSnapshot.child("pass").getValue(String.class);
                         usernameEditText.setText(correos);
                         passwordEditText.setText(contra);
+                        biometricPrompt.authenticate(promptInfo);
                     }
                 }
                 @Override
@@ -153,7 +157,6 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this,"Fallo la lectura: " + databaseError.getCode(),Toast.LENGTH_LONG);
                 }
             });
-            biometricPrompt.authenticate(promptInfo);
         }
 
 
@@ -263,8 +266,10 @@ public class LoginActivity extends AppCompatActivity {
                                         public void onDataChange(DataSnapshot dataSnapshot) {
                                             if (dataSnapshot.exists()) {
                                                 String data = dataSnapshot.child("access").getValue(String.class);
+                                                finish();
                                                 startActivity(new Intent(LoginActivity.this,Principal.class));
                                             }else{
+                                                finish();
                                                 startActivity(new Intent(LoginActivity.this,PrincipalAdmin.class));
                                             }
                                         }

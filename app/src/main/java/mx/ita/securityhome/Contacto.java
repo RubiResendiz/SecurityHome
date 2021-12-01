@@ -9,10 +9,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class Contacto extends AppCompatActivity {
-    /**
- * codigo del contacto en java 
- *  
- */
     ImageButton btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

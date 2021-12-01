@@ -38,7 +38,7 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="title_activity_invitadoslista">guest list</string>
+    <string name="title_activity_invitadoslista">invitadoslista</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -72,7 +72,7 @@
     <string name="contrase_a_aleatoria">Random password</string>
     <string name="actualizar_informaci_n">Update info</string>
 
-    <string name="g_nero">Gender</string>
+    <string name="g_nero">Genre</string>
 
     <string name="nombre">Name</string>
     <string name="apellido">Last Name</string>
@@ -91,7 +91,7 @@
     <string name="fecha_de_salida_02_10_2020_hora_19_10">Exit date: 02/10/2020 Hour: 19:10</string>
     <string name="anfitri_n_rebeca_s_nchez">Host: Rebeca Sánchez</string>
 
-    <string name="registro_de_prueba_usuario_normal">Normal user test log</string>
+    <string name="registro_de_prueba_usuario_normal">Registro de prueba usuario normal</string>
     <string name="iniciar_sesi_n">Login</string>
     <string name="modo_administrador">Admin mode</string>
 
@@ -103,7 +103,7 @@
     <string name="sonido_de_splash_screen">Splash Screen sound</string>
     <string name="buenos_d_as">Good morning,</string>
     <string name="notificaciones">Notificacions</string>
-    <string name="pr_ximo_6_de_noviembre">Next November 6</string>
+    <string name="pr_ximo_6_de_noviembre">Próximo 6 de Noviembre</string>
     <string name="acerca_de">About us</string>
     <string name="cont_ctanos">Contact us</string>
     <string name="organizar_una_reuni_n">Organize a meeting</string>
@@ -111,10 +111,46 @@
     <string name="invitados">Guests</string>
     <string name="espa_ol">Spanish</string>
     <string name="ingl_s">English</string>
-    <string name="enviar">send</string>
+    <string name="splash_screen_animado">Animated Splash Screen</string>
+    <string name="tutorial">How To</string>
+    <string name="agregar_reuni_n">Add meeting</string>
+    <string name="del_d_a">From day:</string>
+    <string name="al_d_a">To day:</string>
+    <string name="horario_de">In:</string>
+    <string name="a">Out:</string>
+    <string name="selecciona_una_fecha">Select a date</string>
+    <string name="seleccione_una_hora">Select an hour</string>
+    <string name="guardar_reuni_n">Save meeting</string>
+    <string name="crear_reuni_n">Create a meeting</string>
+    <string name="selecciona_una_hora">Select an hour</string>
+    <string name="agregar_invitado">Add guest</string>
+    <string name="no_soy_un_robot">I\'m not a robot</string>
+    <string name="califica_nuestra_app">Rate our App</string>
+    <string name="escribe_una_opini_n">Write an opinion</string>
+    <string name="servidor">Server</string>
+    <string name="direcci_n_ip_del_servidor">IP address server</string>
+    <string name="estado_de_la_conexi_n">Connection status</string>
+    <string name="esperando">Waiting for...</string>
+    <string name="conectar">Connect</string>
+    <string name="editar_reuni_n">Edit meeting</string>
+    <string name="guardar_cambios">Save changes</string>
+    <string name="invitados_de_residentes">Residents guests</string>
+    <string name="buscar_todos">Search all</string>
+    <string name="buscar_por_residente">Search by resident</string>
+    <string name="regresar">Back</string>
+    <string name="siguiente">Next</string>
+    <string name="iot">Internet of Things</string>
+    <string name="salir">Exit</string>
     <string name="reportar_un_bug">Report a bug</string>
-    <string name="para">for</string>
-    <string name="mensaje">message</string>
-    <string name="asunto">affair</string>
-    <string name="se_enviar_un_mensaje_por_correo_a_findmybusiness_gmail_com_en_el_que_detallar_s_el_problema_que_encontraste_nuestros_colaboradores_te_ayudar_n_en_breve_mejorando_la_aplicaci_n">e-mail message</string>
+    <string name="para_securyhome21_gmail_com">To: securyhome21@gmail.com</string>
+    <string name="reporte">Report</string>
+    <string name="bienvenido">Welcome,</string>
+    <string name="men">Menu</string>
+    <string name="ajustes">Settings</string>
+    <string name="ayuda">Help</string>
+    <string name="calif_canos">Rate us</string>
+    <string name="cerrar_sesion">Sign Out</string>
+    <string name="escr_benos">♥Give us love♥</string>
+    <string name="reunion">Meeting</string>
+    <string name="bandera">🇲🇽</string>
 </resources>

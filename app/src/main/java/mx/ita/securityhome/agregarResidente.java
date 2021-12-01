@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -27,11 +28,9 @@ import java.util.Map;
 import mx.ita.securityhome.ui.login.LoginActivity;
 
 public class agregarResidente extends AppCompatActivity {
-    /**
- * Codigo fuente de agregar residente 
- */
     private FirebaseAuth mAuth;
     DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +44,13 @@ public class agregarResidente extends AppCompatActivity {
                 correo = findViewById(R.id.txtCorreoAgregarRes),
                 pass = findViewById(R.id.txtPassAgregarRes),
                 calle = findViewById(R.id.txtCalleAgregarRes);
+
         pass.setText(generateRandomPassword(10));
         Button concluir = findViewById(R.id.btnFinalizarResidente);
         concluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String nom = nombre.getText().toString(),
                         num = numero.getText().toString(),
                         cor = correo.getText().toString(),
@@ -63,28 +64,46 @@ public class agregarResidente extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d("Message", "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    Log.i("ID USUARIO NUEVO", mAuth.getUid());
-                                    Map<String, Object> map = new HashMap<>();
-                                    String IDnuevo = mAuth.getCurrentUser().getUid();
-                                    map.put("id", IDnuevo);
-                                    map.put("nombre", nom);
-                                    map.put("calle",cal);
-                                    map.put("numero", num);
-                                    map.put("pass",pas);
-                                    map.put("url", "lol" );
-                                    map.put("access", "RES");
-                                    mDatabase.child("residentes").child(IDnuevo).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task2) {
-                                            if(task2.isSuccessful()){
-                                                Log.i("Todo bien", "Todo bien master");
-                                            }else{
-                                                Log.w("Error XD 1",task2.getException());
+                                    user.getIdToken(true).addOnCompleteListener(
+                                            new OnCompleteListener<GetTokenResult>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<GetTokenResult> task) {
+                                                    if (task.isSuccessful()) {
+                                                        String token = task.getResult().getToken();
+                                                        Log.i("ID USUARIO NUEVO", mAuth.getUid());
+                                                        Map<String, Object> map = new HashMap<>();
+                                                        String IDnuevo = mAuth.getCurrentUser().getUid();
+                                                        map.put("id", IDnuevo);
+                                                        map.put("nombre", nom);
+                                                        map.put("calle",cal);
+                                                        map.put("numero", num);
+                                                        map.put("pass",pas);
+                                                        map.put("correo",cor);
+                                                        map.put("url", "lol" );
+                                                        map.put("access", "RES");
+                                                        Log.i("imprimir token", token);
+                                                        map.put("token", token);
+                                                        mDatabase.child("residentes").child(IDnuevo).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                            @Override
+                                                            public void onComplete(@NonNull Task<Void> task2) {
+                                                                if(task2.isSuccessful()){
+                                                                    Log.i("Todo bien", "Todo bien master");
+                                                                }else{
+                                                                    Log.w("Error XD 1",task2.getException());
+                                                                }
+                                                            }
+                                                        });
+                                                        Intent intent = getIntent();
+                                                        finish();
+                                                        startActivity(intent);
+
+                                                    } else {
+                                                        // Handle error -> task.getException();
+                                                    }
+                                                }
                                             }
-                                        }
-                                    });
-                                    Intent myIntent = new Intent(agregarResidente.this, agregarResidente.class);
-                                    agregarResidente.this.startActivity(myIntent);
+                                    ).toString();
+
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Log.w("Message", "createUserWithEmail:failure", task.getException());

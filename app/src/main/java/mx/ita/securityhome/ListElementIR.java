@@ -4,11 +4,15 @@ public class ListElementIR {
     public String name;
     public String telefono;
     public String id;
+    public String anfitrion;
+    public String tabla;
 
-    public ListElementIR(String name, String telefono, String id){
+    public ListElementIR(String name, String telefono, String id, String anfitrion, String tabla){
         this.name= name;
         this.telefono = telefono;
         this.id = id;
+        this.anfitrion = anfitrion;
+        this.tabla = tabla;
     }
 
     public String getId() {
@@ -34,4 +38,16 @@ public class ListElementIR {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    public String getAnfitrion() {
+        return anfitrion;
+    }
+
+    public void setAnfitrion (String anfitrion) { this.anfitrion = anfitrion; }
+
+    public String getTabla() {
+        return tabla;
+    }
+
+    public void setTabla (String tabla) { this.tabla = tabla; }
 }

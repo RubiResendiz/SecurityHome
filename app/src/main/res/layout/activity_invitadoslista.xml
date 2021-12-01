@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondoblurred2"
     tools:context=".invitadoslista">
 
     <FrameLayout
@@ -24,7 +25,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddReunion"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnAddReunion" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -79,9 +80,20 @@
         android:layout_marginEnd="133dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/invitados"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btnCambiarIdioma"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="🇲🇽"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

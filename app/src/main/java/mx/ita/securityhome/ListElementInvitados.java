@@ -1,5 +1,7 @@
 package mx.ita.securityhome;
 
+import android.graphics.Bitmap;
+
 public class ListElementInvitados {
     public String name;
     public String telefono;

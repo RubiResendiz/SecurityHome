@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#009688"
     tools:context=".editarinvitado">
 
     <LinearLayout
@@ -62,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_weight="1"
+                android:paddingTop="8dp"
                 android:text="@string/g_nero"
                 android:textColor="#000000"
                 android:textSize="18sp" />
@@ -85,6 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
+                android:paddingTop="8dp"
                 android:text="@string/tipo_de_relaci_n"
                 android:textColor="#000000"
                 android:textSize="18sp" />
@@ -102,6 +105,9 @@
             android:id="@+id/btnEditConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
             android:text="@string/editar_invitado" />
 
         <ImageView

@@ -88,7 +88,6 @@ public class gestionResidentes extends AppCompatActivity {
                         recyclerView.setAdapter(listAdapter);
                     }
                 }
-
             }
 
             @Override

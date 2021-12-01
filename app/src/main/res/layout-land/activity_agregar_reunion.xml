@@ -3,22 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#48A7DC">
 
     <Button
-        android:id="@+id/btnGuardarEditReunion"
+        android:id="@+id/btnGuardarReunion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="288dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Crear reunión"
+        android:text="@string/crear_reuni_n"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
-        android:id="@+id/btnReturnListaEditReu"
+        android:id="@+id/btnReturnLista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="74dp"
-        android:text="Del día:"
+        android:text="@string/del_d_a"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
-        android:text="Al día:"
+        android:text="@string/al_d_a"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/textView24"
@@ -52,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Horario de:"
+        android:text="@string/horario_de"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/textView25"
@@ -63,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
-        android:text="A: "
+        android:text="@string/a"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/textView26"
@@ -83,65 +86,65 @@
 
 
 
+
+
+
+
     ]]>
 
     <TextView
-        android:id="@+id/pickDate1E"
+        android:id="@+id/pickDate1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="280dp"
-        android:hint="Selecciona una fecha"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/selecciona_una_fecha"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView52"
         app:layout_constraintTop_toBottomOf="@+id/textView52" />
 
     <TextView
-        android:id="@+id/pickHour1E"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="260dp"
-        android:ems="10"
-        android:hint="Selecciona una hora"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickDate2E" />
-
-    <TextView
-        android:id="@+id/pickDate2E"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="280dp"
-        android:hint="Selecciona una fecha"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickDate1E" />
-
-    <TextView
-        android:id="@+id/pickHour2E"
+        android:id="@+id/pickHour1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="260dp"
         android:ems="10"
-        android:hint="Selecciona una hora"
+        android:hint="@string/selecciona_una_hora"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+        app:layout_constraintStart_toStartOf="@+id/pickDate2"
+        app:layout_constraintTop_toBottomOf="@+id/pickDate2" />
+
+    <TextView
+        android:id="@+id/pickDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:hint="@string/selecciona_una_fecha"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/pickDate1"
+        app:layout_constraintTop_toBottomOf="@+id/pickDate1" />
+
+    <TextView
+        android:id="@+id/pickHour2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/selecciona_una_hora"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/pickHour1"
+        app:layout_constraintTop_toBottomOf="@+id/pickHour1" />
 
     <TextView
         android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="5dp"
-        android:text="Agregar Reunión"
+        android:text="@string/agregar_reuni_n"
         android:textColor="#000000"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

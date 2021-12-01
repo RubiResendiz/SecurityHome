@@ -33,16 +33,16 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
         galleryViewModel =
                 new ViewModelProvider(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        Button idioma = root.findViewById(R.id.btnBug);
-        idioma.setOnClickListener(this);
+
         Switch sw = root.findViewById(R.id.switch1),
             sw2 = root.findViewById(R.id.switch2);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        //sacmos configuración previa
         String val1 = preferences.getString("splash",null);
-        sw.setChecked(val1 == "sonido" ? false:true);
+        sw.setChecked(val1.equals("sonido") ? true:false);
         String val2 = preferences.getString("anim",null);
-        sw2.setChecked(val2 =="true"?false:true);
+        sw2.setChecked(val2.equals("true")?true:false);
 
         sw.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +65,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
         sw2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(sw.isChecked()){
+                if(sw2.isChecked()){
                     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("anim", "true");
@@ -85,14 +85,6 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnBug:
-                Intent email= new Intent(Intent.ACTION_SENDTO);
-                email.setData(Uri.parse("mailto:findmybusinesscorp.com"));
-                email.putExtra(Intent.EXTRA_SUBJECT, "Reporte de bug");
-                email.putExtra(Intent.EXTRA_TEXT, "Descripción del suceso");
-                startActivity(email);
-                break;
-        }
+
     }
 }

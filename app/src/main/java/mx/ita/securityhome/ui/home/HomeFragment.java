@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,9 +36,10 @@ import mx.ita.securityhome.R;
 import mx.ita.securityhome.invitadoslista;
 
 public class HomeFragment extends Fragment implements View.OnClickListener{
-
-    private HomeViewModel homeViewModel;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+    String userID = mAuth.getCurrentUser().getUid();
+    private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -45,12 +48,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         Button btnAgregarUsuario = root.findViewById(R.id.btnAgregarInvitado);
         btnAgregarUsuario.setOnClickListener(this);
-        Button btnNotificaciones = root.findViewById(R.id.btnnotificaciones);
+        ref.keepSynced(true);
         ImageView fondo = root.findViewById(R.id.fondodia);
         TextView nombreUser = root.findViewById(R.id.txtNombreHome);
         TextView dia = root.findViewById(R.id.txtBuendia);
         ImageButton qr = root.findViewById(R.id.btnQR);
-        btnNotificaciones.setOnClickListener(this);
+
         Calendar rightNow = Calendar.getInstance();
         int currentHourIn24Format = rightNow.get(Calendar.HOUR_OF_DAY);
 
@@ -64,21 +67,26 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         if(currentHourIn24Format >=21 && currentHourIn24Format <6)
             fondo.setImageResource(R.drawable.noche);
 
-
+        //generar QR
         Query query = ref.child("residentes");
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+        Log.i("id",userID);
+        query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     for (DataSnapshot citi : dataSnapshot.getChildren()) {
-                        String nombre = citi.child("nombre").getValue().toString();
-                        String calle = citi.child("calle").getValue().toString();
-                        String numEXT = citi.child("numero").getValue().toString();
-                        String URL = citi.child("url").getValue().toString();
                         String id = citi.child("id").getValue().toString();
-                        Bitmap bitmap = QRCode.from(id).withSize(400,400).bitmap();
-                        qr.setImageBitmap(bitmap);
-                        nombreUser.setText(nombre);
+                        if(id.equals(userID)){
+                            Log.i("veamos log: " , citi.getChildrenCount()+"");
+                            String nombre = citi.child("nombre").getValue().toString();
+                            String calle = citi.child("calle").getValue().toString();
+                            String numEXT = citi.child("numero").getValue().toString();
+                            String URL = citi.child("url").getValue().toString();
+
+                            Bitmap bitmap = QRCode.from(id).withSize(400,400).bitmap();
+                            qr.setImageBitmap(bitmap);
+                            nombreUser.setText(nombre);
+                        }
                     }
                 }
             }
@@ -99,10 +107,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             case R.id.btnAgregarInvitado:
                 Intent intent = new Intent(getActivity(), invitadoslista.class);
                 startActivity(intent);
-                break;
-            case R.id.btnnotificaciones:
-                Intent noti = new Intent(getActivity(), Notificaciones.class);
-                startActivity(noti);
                 break;
             case R.id.btnContacto:
                 Intent contacto = new Intent(getActivity(), Contacto.class);

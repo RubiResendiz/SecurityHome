@@ -1,6 +1,7 @@
 package mx.ita.securityhome;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.gesture.Gesture;
 import android.gesture.GestureLibraries;
@@ -38,6 +39,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -81,7 +83,7 @@ public class Principal extends AppCompatActivity implements
             }
         });
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.puntuarApp, R.id.enviarBugs, R.id.cerrarsesion)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -102,11 +104,16 @@ public class Principal extends AppCompatActivity implements
                 if (dataSnapshot.exists()) {
                     String calle = dataSnapshot.child("calle").getValue(String.class);
                     String numero = dataSnapshot.child("numero").getValue(String.class);
-
+                    String nombre = dataSnapshot.child("nombre").getValue(String.class);
+                    String url = dataSnapshot.child("url").getValue(String.class);
+                    String access = dataSnapshot.child("access").getValue(String.class);
+                    String correo = dataSnapshot.child("correo").getValue(String.class);
+                    String pass = dataSnapshot.child("pass").getValue(String.class);
                     TextView txtNombre = (TextView) headerView.findViewById(R.id.txtCalleHeader);
 
                     String full = calle+ " #" +numero;
                     txtNombre.setText(full);
+
                 }
             }
 
@@ -126,6 +133,7 @@ public class Principal extends AppCompatActivity implements
         }
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -134,25 +142,40 @@ public class Principal extends AppCompatActivity implements
         esp.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                    Locale localizacion = new Locale("es", "ES");
-                    Locale.setDefault(localizacion);
-                    Configuration config = new Configuration();
-                    config.locale = localizacion;
-                    getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-                    Log.i("Cocacola","espuma1");
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(Principal.this);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("idioma", "es");
+                editor.commit();
+                Log.i("shared", preferences.getString("idioma",null));
+                Locale localizacion = new Locale("es", "ES");
+                Locale.setDefault(localizacion);
+                Configuration config = new Configuration();
+                config.locale = localizacion;
+                getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                Log.i("Cocacola","espuma1");
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
                 return false;
             }
         });
         en.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(Principal.this);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("idioma", "en");
+                editor.commit();
+                Log.i("shared", preferences.getString("idioma",null));
                 Locale localizacion = new Locale("en", "US");
                 Locale.setDefault(localizacion);
                 Configuration config = new Configuration();
                 config.locale = localizacion;
                 getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
                 Log.i("Cocacola","espuma2");
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
                 return false;
             }
         });

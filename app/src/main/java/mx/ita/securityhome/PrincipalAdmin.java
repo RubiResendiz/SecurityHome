@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import mx.ita.securityhome.ui.login.LoginActivity;
+
 public class PrincipalAdmin extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,14 @@ public class PrincipalAdmin extends AppCompatActivity {
         btnInvitados = findViewById(R.id.btnGestionInv);
         btnVisitar = findViewById(R.id.btnGestionVis);
         Button btnIot = findViewById(R.id.btnIOT);
+        Button salir = findViewById(R.id.btnExitAdmin);
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                startActivity(new Intent(PrincipalAdmin.this, LoginActivity.class));
+            }
+        });
         btnResidentes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

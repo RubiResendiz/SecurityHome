@@ -4,48 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4FB639"
     tools:context=".ui.slideshow.SlideshowFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#FFFFFF"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/btnReturnPrincipal"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnAcercade"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#05FFFFFF"
-            android:src="@drawable/chevron_left_black_24dp" />
+            android:text="@string/acerca_de" />
 
         <Button
             android:id="@+id/btnContacto"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cont_ctanos" />
 
         <Button
             android:id="@+id/btnHowTo"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tutorial" />
+            android:text="@string/tutorial" />
 
-        <Button
-            android:id="@+id/btnAcercade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/acerca_de" />
-
-        <Button
-            android:id="@+id/btnCalifica"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Califícanos" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

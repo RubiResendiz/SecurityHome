@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E2EDF3"
     tools:context=".ui.home.HomeFragment">
 
     <FrameLayout
@@ -33,7 +32,7 @@
                 android:layout_margin="6dp"
                 android:layout_marginTop="6dp"
                 android:fontFamily="sans-serif"
-                android:text="Bienvenido,"
+                android:text="@string/bienvenido"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
@@ -59,31 +58,11 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/btnnotificaciones"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="9dp"
-        android:background="#2196F3"
-        android:backgroundTint="#9F2A2A"
-        android:foregroundTint="#000000"
-        android:shadowColor="#FFFFFF"
-        android:text="@string/notificaciones"
-        app:icon="@drawable/notify"
-        app:iconSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAgregarInvitado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="#A01F1F" />
-
-    <Button
         android:id="@+id/btnAgregarInvitado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
         android:layout_marginBottom="53dp"
         android:background="#2196F3"
         android:backgroundTint="#9F2A2A"

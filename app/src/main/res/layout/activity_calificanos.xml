@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="#57227E"
     tools:context=".Calificanos">
 
     <ImageButton
@@ -16,7 +16,8 @@
         android:background="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/chevron_left_black_24dp" />
+        app:srcCompat="@drawable/chevron_left_black_24dp"
+        app:tint="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView60"
@@ -26,8 +27,8 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="42dp"
         android:fontFamily="casual"
-        android:text="Califica nuestra app"
-        android:textColor="#131313"
+        android:text="@string/califica_nuestra_app"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,37 +41,87 @@
         android:layout_marginStart="85dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="86dp"
+        android:progressTint="#059FE4"
+        android:stepSize="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView60" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="330dp"
-        android:layout_height="220dp"
+        android:id="@+id/txtCampoComentario"
+        android:layout_width="327dp"
+        android:layout_height="175dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="23dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
-        android:hint="Escribe una opinión"
+        android:hint="@string/escribe_una_opini_n"
         android:inputType="textPersonName"
-        android:textColorHint="#000000"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9B9EA8"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreTemporal" />
 
     <ImageButton
         android:id="@+id/btnSendOp"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="59dp"
+        android:layout_height="56dp"
         android:layout_marginStart="177dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="178dp"
         android:background="#00FFFFFF"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/txtCampoComentario"
         app:srcCompat="@android:drawable/ic_menu_send" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCampoComentario"
+        tools:text="Comentarios" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recicladoraComentarios"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <EditText
+        android:id="@+id/txtNombreTemporal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="39dp"
+        android:hint="@string/escr_benos"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#EDEAEA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <ImageView
+        android:id="@+id/goBug"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="176dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/report_bug" />
 </androidx.constraintlayout.widget.ConstraintLayout>

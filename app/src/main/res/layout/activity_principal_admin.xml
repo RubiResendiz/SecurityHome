@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1E5E5C"
+    android:background="@drawable/fondoadmin"
     tools:context=".PrincipalAdmin">
 
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="32dp"
+        android:background="#99000000"
         android:text="@string/modo_administrador"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
@@ -24,24 +25,21 @@
         android:id="@+id/layoutAdmin"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="45dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/esquinas_redondeadas"
+        android:background="#7AFFFFFF"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView36"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView36">
 
         <Button
             android:id="@+id/btnGestionarResidentes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#489F81"
             android:text="@string/gesti_n_de_residentes" />
 
         <Button
@@ -60,6 +58,12 @@
             android:id="@+id/btnIOT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="IoT" />
+            android:text="@string/iot" />
+
+        <Button
+            android:id="@+id/btnExitAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salir" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
