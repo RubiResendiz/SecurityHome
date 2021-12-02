@@ -1,27 +1,28 @@
 from asyncio.coroutines import iscoroutinefunction
-import cv2
-import socket
-import time
-import imutils
-import base64
-from pyzbar import pyzbar
-from firebase import firebase
-from datetime import datetime
-import asyncio
-import queue
-import threading as th
-import netifaces as ni
-import json
-from playsound import playsound
+import cv2 #administración de imagen y video 
+import socket #crear socket para conectar con JAVA
+import time #gestión de tiempo
+import imutils #herramientas de formato
+import base64 #conversión de binarios a base64 en un string
+from pyzbar import pyzbar #conversión de texto a QR
+from firebase import firebase #administración con firebase
+from datetime import datetime, timedelta #gestión del tiempo
+import asyncio 
+import queue #colas
+import threading as th #crear tarea
+import netifaces as ni #ver interfaces de la rasp y conectar a la interfaz
+import json #interpretar resultados de QUERYS a firebase como JSON 
+from playsound import playsound #reproducción de sonido
 
-q = queue.Queue(maxsize=1)
+q = queue.Queue(maxsize=1) 
 
 def contador():
-    playsound("ok.wav")
+
     time.sleep(1)
     print("Finished")
     
 firebase = firebase.FirebaseApplication('https://security-home-b0ecc-default-rtdb.firebaseio.com/', None) 
+#función lectro QR
 
 def read_barcodes(frame, isR):
     barcodes = pyzbar.decode(frame)
@@ -47,22 +48,30 @@ def read_barcodes(frame, isR):
                 if not result is None:  
                     data = {'id_visitante': barcode_info,'tiempo': actual,'dia': day, 'hora': hour}
                     firebase.post('/visitas/',data)
+                    playsound("ok.wav")
                 else:
                     print("No existe en la BD")
+                    playsound("error.wav")
 
             if len(barcode_info)==38:
                 print("Invitado " + barcode_info)
-                dir = "/residentes/" + barcode_info
+                dir = "/invitados/" + barcode_info
                 result = firebase.get(dir, '')
                 if not result is None:
-                    data = {'id_visitante': barcode_info,'tiempo': now.strftime("%Y-%m-%d %H:%M:%S"),'dia': now.strftime("%Y-%m-%d"), 'hora': ("%s:%s"%(now.hour,now.minute))}
+                    data = {'id_visitante': barcode_info,'tiempo': actual,'dia': day, 'hora': hour}
                     firebase.post('/visitas/',data)
+                    playsound("ok.wav")
+                else:
+                    print("No existe en la BD")
+                    playsound("error.wav")
+                    
             if len(barcode_info)==15:
                 print(barcode_info)
                 dir = "/reuniones/" + barcode_info
                 result = firebase.get(dir, '')
                 if result is None:
-                    print("No hay registro")  
+                    print("No hay registro")
+                    playsound("error.wav")
                 else:
                     json_str = json.dumps(result)
                     resp = json.loads(json_str)
@@ -76,19 +85,30 @@ def read_barcodes(frame, isR):
                     if comparadia >= fechainicio and comparadia<=fechafin:
                         print("dias sí")
                         if comparadia == fechainicio:
-                            if(comparahora >=horainicio):
+                            if(comparahora >=horainicio and comparahora <= horafin):
+                                data = {'id_visitante': barcode_info,'tiempo': actual,'dia': day, 'hora': hour}
+                                firebase.post('/visitas/',data)
                                 print("fiestaloca")
+                                playsound("ok.wav")
                             else:
                                 print("No empieza la fiesta :(")
+                                playsound("error.wav")
                         else:
                             print((fechafin-comparadia))
-                            if (fechafin-comparadia) ==  relativedelta:
+                            if (fechafin-comparadia) ==  timedelta(0):
                                 if comparahora<=horafin:
+                                    data = {'id_visitante': barcode_info,'tiempo': actual,'dia': day, 'hora': hour}
+                                    firebase.post('/visitas/',data)
                                     print("si hay fiestaaa")
+                                    playsound("ok.wav")
                                 else:
+                                    playsound("error.wav")
                                     print("se acabo la hora :(")
                             else:
                                 print("fiesta a lo lardo del dia")
+                                playsound("ok.wav")
+                                data = {'id_visitante': barcode_info,'tiempo': actual,'dia': day, 'hora': hour}
+                                firebase.post('/visitas/',data)
                     else:
                         print("dias no")
                         print(fechainicio)
@@ -96,13 +116,12 @@ def read_barcodes(frame, isR):
                     
                     
         else:
-            print("deben pasar 3 segundo mínimamente")   
+            print("deben pasar 1 segundo mínimamente")   
             
         cv2.rectangle(frame, (x, y),(x+w, y+h), (0, 255, 0), 2)
         #PASO 2 MAPEAR CON UNA FUENTE Y RETORNAR FRAME
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, barcode_info, (x + 6, y - 6), font, 2.0, (255, 255, 255), 1)
-
     return frame
 
 def main():
@@ -119,8 +138,8 @@ def main():
     global TS
     #Establecemos la IP del servidor (este equipo)
 
-    ni.ifaddresses('wlan0')
-    ip = ni.ifaddresses('wlan0')[ni.AF_INET][0]['addr']
+    ni.ifaddresses('eth0')
+    ip = ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
     host_ip = ip
     print('IP DEL HOST:', host_ip)
     #El puerto será 9999
